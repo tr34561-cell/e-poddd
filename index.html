@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | วุฒิภัทร อินตะนัย</title>
+    <title>Portfolio | นางสาว ทิติฐา ทองแถม</title>
 
     <style>
         /* ========================================
@@ -18,19 +18,19 @@
         }
 
         :root {
-            /* สีหลัก มจพ. */
-            --red: #AC3520;
-            --dark-red: #7F2415;
-            --light-red: #FBEDEA;
-            --black: #151515;
+            /* โทนสีหลัก มหาวิทยาลัยบูรพา (เทา-ทอง) */
+            --primary: #B59410;
+            --dark-primary: #8A6F08;
+            --light-bg: #FAF6E6;
+            --black: #222222;
             --white: #FFFFFF;
-            --gray: #666666;
+            --gray: #555555;
         }
 
         body {
             font-family: Arial, "Tahoma", sans-serif;
             background: var(--white);
-            color: #222;
+            color: var(--black);
             line-height: 1.6;
         }
 
@@ -49,35 +49,26 @@
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
         }
 
-        /* โลโก้ + ชื่อเว็บไซต์ */
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
             font-size: 24px;
             font-weight: bold;
-            color: var(--red);
+            color: var(--dark-primary);
         }
 
-        /* ช่องวงกลมสำหรับโลโก้ มจพ. ด้านบน Header */
         .logo-box {
-            width: 58px;
-            height: 58px;
+            width: 54px;
+            height: 54px;
             border-radius: 50%;
-            background: var(--light-red);
-            border: 2px solid #E8B8AD;
+            background: var(--light-bg);
+            border: 2px solid #E2D18A;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(172, 53, 32, 0.15);
-        }
-
-        .logo-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            padding: 4px;
+            font-size: 24px;
+            box-shadow: 0 2px 8px rgba(181, 148, 16, 0.15);
         }
 
         /* Navigation */
@@ -95,32 +86,24 @@
         }
 
         nav a:hover {
-            color: var(--red);
+            color: var(--primary);
         }
 
         /* ========================================
            Hero Section
         ======================================== */
         .hero {
-            min-height: 90vh;
+            min-height: 85vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 50px 8%;
-            background: linear-gradient(135deg, #ffffff 50%, var(--light-red) 50%);
+            background: linear-gradient(135deg, #ffffff 50%, var(--light-bg) 50%);
         }
 
         .hero-content {
             max-width: 850px;
-        }
-
-        .hero-logo {
-            width: 150px;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 5px 12px rgba(172, 53, 32, 0.2));
         }
 
         .hero h1 {
@@ -135,7 +118,7 @@
         }
 
         .hero h2 span {
-            color: var(--red);
+            color: var(--dark-primary);
         }
 
         .hero p {
@@ -150,7 +133,7 @@
         .btn {
             display: inline-block;
             padding: 13px 30px;
-            background: var(--red);
+            background: var(--primary);
             color: white;
             border-radius: 30px;
             text-decoration: none;
@@ -159,7 +142,7 @@
         }
 
         .btn:hover {
-            background: var(--dark-red);
+            background: var(--dark-primary);
             transform: translateY(-3px);
         }
 
@@ -202,9 +185,9 @@
             height: 250px;
             margin: auto;
             border-radius: 50%;
-            background: var(--light-red);
-            border: 8px solid #E8B8AD;
-            box-shadow: 0 8px 25px rgba(172, 53, 32, 0.15);
+            background: var(--light-bg);
+            border: 8px solid #E2D18A;
+            box-shadow: 0 8px 25px rgba(181, 148, 16, 0.15);
             overflow: hidden;
         }
 
@@ -216,17 +199,18 @@
 
         .about-text h3 {
             font-size: 28px;
-            color: var(--red);
+            color: var(--dark-primary);
             margin-bottom: 15px;
         }
 
         .about-text p {
             color: var(--gray);
             margin-bottom: 20px;
+            text-align: justify;
         }
 
         /* ========================================
-           Skills
+           Skills / Interests
         ======================================== */
         .skills {
             display: flex;
@@ -236,106 +220,42 @@
 
         .skill {
             padding: 7px 15px;
-            background: var(--light-red);
-            color: var(--dark-red);
-            border: 1px solid #E8B8AD;
+            background: var(--light-bg);
+            color: var(--dark-primary);
+            border: 1px solid #E2D18A;
             border-radius: 20px;
             font-size: 14px;
             font-weight: bold;
         }
 
         /* ========================================
-           Projects Section
+           Faculty / Academic Info Section
         ======================================== */
-        .projects {
-            background: var(--light-red);
+        .faculty-section {
+            background: var(--light-bg);
         }
 
-        .project-container {
-            max-width: 1100px;
+        .faculty-box {
+            max-width: 900px;
             margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            border-top: 5px solid var(--primary);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
         }
 
-        .project-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border-top: 4px solid var(--red);
-            transition: 0.3s;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(172, 53, 32, 0.15);
-        }
-
-        /* กรอบใส่รูปผลงาน */
-        .project-img {
-            width: 100%;
-            height: 180px;
-            background: #f5f5f5;
-            overflow: hidden;
-        }
-
-        .project-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: 0.3s;
-        }
-
-        .project-card:hover .project-img img {
-            transform: scale(1.05);
-        }
-
-        /* ส่วนเนื้อหาภายในการ์ด */
-        .project-info {
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .project-icon {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .faculty-box h3 {
+            font-size: 24px;
+            color: var(--dark-primary);
             margin-bottom: 15px;
-            border-radius: 12px;
-            background: var(--light-red);
-            color: var(--red);
-            font-size: 22px;
         }
 
-        .project-card h3 {
-            color: var(--black);
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
+        .faculty-box p {
             color: var(--gray);
-            margin-bottom: 20px;
-            font-size: 14px;
-            flex-grow: 1;
-        }
-
-        .project-link {
-            color: var(--red);
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .project-link:hover {
-            color: var(--dark-red);
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.8;
         }
 
         /* ========================================
@@ -349,9 +269,9 @@
             max-width: 700px;
             margin: auto;
             padding: 40px;
-            background: var(--light-red);
+            background: var(--light-bg);
             border-radius: 20px;
-            border: 1px solid #E8B8AD;
+            border: 1px solid #E2D18A;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
         }
 
@@ -361,13 +281,13 @@
         }
 
         .contact-box a {
-            color: var(--red);
+            color: var(--dark-primary);
             text-decoration: none;
             font-weight: bold;
         }
 
         .contact-box a:hover {
-            color: var(--dark-red);
+            color: var(--primary);
         }
 
         /* ========================================
@@ -381,7 +301,7 @@
         }
 
         footer span {
-            color: #D96A55;
+            color: #E2D18A;
         }
 
         /* ========================================
@@ -398,23 +318,14 @@
                 font-size: 20px;
             }
 
-            .logo-box {
-                width: 50px;
-                height: 50px;
-            }
-
             nav ul {
                 gap: 15px;
                 font-size: 14px;
             }
 
             .hero {
-                min-height: 85vh;
+                min-height: 80vh;
                 padding: 40px 5%;
-            }
-
-            .hero-logo {
-                width: 120px;
             }
 
             .hero h1 {
@@ -434,17 +345,21 @@
                 text-align: center;
             }
 
-            .skills {
-                justify-content: center;
+            .about-text p {
+                text-align: center;
             }
 
-            .project-container {
-                grid-template-columns: 1fr;
+            .skills {
+                justify-content: center;
             }
 
             .profile-box {
                 width: 200px;
                 height: 200px;
+            }
+
+            .faculty-box {
+                padding: 25px;
             }
         }
     </style>
@@ -455,9 +370,7 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <div class="logo-box">
-                <img src="https://www.kmutnb.ac.th/getattachment/about/symbols/logo_kmutnb-(1).png.aspx" alt="ตราประจำมหาวิทยาลัย มจพ.">
-            </div>
+            <div class="logo-box">📊</div>
             <span>My Portfolio</span>
         </div>
 
@@ -465,7 +378,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#faculty">Faculty</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -476,17 +389,13 @@
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <img src="https://www.kmutnb.ac.th/getattachment/about/symbols/logo_kmutnb-(1).png.aspx"
-                     alt="ตราประจำมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ"
-                     class="hero-logo">
-
-                <h1>Portfolio </h1>
-                <h2>ผมชื่อ <span>วุฒิภัทร อินตะนัย</span></h2>
+                <h1>Portfolio</h1>
+                <h2>ดิฉันชื่อ <span>นางสาว ทิติฐา ทองแถม</span></h2>
                 <p>
-                    วศ.บ. เทคโนโลยีวิศวกรรมแมคคาทรอนิกส์<br>
-                    (ภาษาไทย ปกติ) วิทยาเขตกรุงเทพฯ
+                    คณะการจัดการและการท่องเที่ยว (สาขาวิชาการบัญชี)<br>
+                    มหาวิทยาลัยบูรพา
                 </p>
-                <a href="#projects" class="btn">ดูผลงานของฉัน</a>
+                <a href="#about" class="btn">ทำความรู้จักกับดิฉัน</a>
             </div>
         </section>
 
@@ -494,86 +403,56 @@
         <section id="about">
             <div class="section-title">
                 <h2>About Me</h2>
-                <p>มาทำความรู้จักกับผมกัน</p>
+                <p>มาทำความรู้จักกับดิฉันกัน</p>
             </div>
 
             <div class="about">
-                <!-- อัปเดตรูปโปรไฟล์เป็นลิงก์ใหม่เรียบร้อยครับ -->
+                <!-- สามารถเปลี่ยนลิงก์รูปโปรไฟล์ตรง src ด้านล่างได้เลย -->
                 <div class="profile-box">
-                    <img src="https://lh3.googleusercontent.com/d/104wUAm3vcR89OvNfZCadx2bL-iKPvJRz=s1000" alt="รูปโปรไฟล์ วุฒิภัทร" onerror="this.src='https://via.placeholder.com/250?text=Profile'">
+                    <img src="https://via.placeholder.com/250?text=Profile" alt="รูปโปรไฟล์ นางสาว ทิติฐา ทองแถม">
                 </div>
 
                 <div class="about-text">
-                    <h3>เกี่ยวกับฉัน</h3>
+                    <h3>เกี่ยวกับดิฉัน</h3>
                     <p>
-                        ผมเป็นนักเรียนระดับมัธยมศึกษาตอนปลายจากโรงเรียนธัญรัตน์ ที่สนใจด้านเทคโนโลยีและการพัฒนาโปรแกรม
-                        ชอบเรียนรู้สิ่งใหม่ ๆ และนำความรู้ที่ได้มาสร้างเป็นผลงานและโครงงานต่าง ๆ
+                        สวัสดีค่ะ ดิฉันนางสาว ทิติฐา ทองแถม เป็นผู้ที่มีความสนใจและมุ่งมั่นในการศึกษาด้านการบัญชีและการบริหารจัดการทางการเงิน
+                        มีความละเอียดรอบคอบ ชอบการวิเคราะห์ข้อมูลตัวเลข และการวางแผนอย่างเป็นระบบ
                     </p>
                     <p>
-                        เป้าหมายของผมคือ การพัฒนาทักษะและนำความรู้ไปต่อยอดในการศึกษาระดับมหาวิทยาลัย
-                        รวมถึงการสร้างนวัตกรรมที่สามารถนำไปใช้ได้จริงและนำมาใช้ในการประกอบอาชีพ
+                        เป้าหมายของดิฉันคือ การเข้าศึกษาต่อในสาขาวิชาการบัญชี มหาวิทยาลัยบูรพา เพื่อพัฒนาทักษะทางวิชาชีพให้ก้าวทันเทคโนโลยีทางบัญชีสมัยใหม่
+                        และสามารถนำความรู้ไปประยุกต์ใช้ในการทำงานได้อย่างมีประสิทธิภาพและมีจรรยาบรรณ
                     </p>
 
                     <div class="skills">
-                        <span class="skill">HTML</span>
-                        <span class="skill">CSS</span>
-                        <span class="skill">JavaScript</span>
-                        <span class="skill">Python</span>
-                        <span class="skill">IoT</span>
-                        <span class="skill">Arduino</span>
+                        <span class="skill">การบัญชีเบื้องต้น</span>
+                        <span class="skill">การวิเคราะห์ข้อมูล</span>
+                        <span class="skill">Microsoft Excel</span>
+                        <span class="skill">การวางแผนการเงิน</span>
+                        <span class="skill">ความละเอียดรอบคอบ</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
+        <!-- Faculty Section (บรรยายเกี่ยวกับคณะบัญชี ม.บูรพา) -->
+        <section id="faculty" class="faculty-section">
             <div class="section-title">
-                <h2>My Projects</h2>
-                <p>ผลงานและโครงงานที่ผมเคยทำ</p>
+                <h2>Why Accounting at BUU?</h2>
+                <p>ความน่าสนใจของสาขาวิชาการบัญชี มหาวิทยาลัยบูรพา</p>
             </div>
 
-            <div class="project-container">
-               
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <div class="project-img">
-                        <img src="https://lh3.googleusercontent.com/d/1CutGBjBLD2H5DSKK4lCgt4b5j5rGfU1y=s1000" alt="Portfolio Website" onerror="this.src='https://via.placeholder.com/400x250?text=Project+1'">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-icon"></div>
-                        <h3>Kidbrigth onstage 2026</h3>
-                        <p>ทีม ของผมได้เข้ารอบ 10 ทีม สุดท้าย (ระดับประเทศ) ผมรับหน้าที่ทางด้าน หุ่นยนต์ครับ</p>
-                        <a href="https://drive.google.com/file/d/1CutGBjBLD2H5DSKK4lCgt4b5j5rGfU1y/view?usp=sharing" target="_blank" class="project-link">ดูรายละเอียด →</a>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <div class="project-img">
-                        <img src="https://lh3.googleusercontent.com/d/1YAShPzSgTAx9DjCh7k1bD_DA8LD_MR7T=s1000" alt="IoT Project" onerror="this.src='https://via.placeholder.com/400x250?text=Project+2'">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-icon"></div>
-                        <h3>Depa coding thailand 2026</h3>
-                        <p>โครงงาน Internet of Things ที่ใช้เซนเซอร์ในการเก็บข้อมูล และนำข้อมูลมาแสดงผล</p>
-                        <a href="https://drive.google.com/file/d/1YAShPzSgTAx9DjCh7k1bD_DA8LD_MR7T/view?usp=sharing" target="_blank" class="project-link">ดูรายละเอียด →</a>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <div class="project-img">
-                        <img src="./project3.jpg" alt="Programming Project" onerror="this.src='https://via.placeholder.com/400x250?text=Project+3'">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-icon"></div>
-                        <h3>Prpject ส่วนตัว</h3>
-                        <p>โครงงานบ้านนก เพื่อจัดตั้ง ให้นกอยู่สุขสบาย</p>
-                        <a href="https://drive.google.com/file/d/11JMg8YledX0oAD3HgWgRmO0mdldR4apf/view?usp=sharing" class="project-link">ดูรายละเอียด →</a>
-                    </div>
-                </article>
-
+            <div class="faculty-box">
+                <h3>สาขาวิชาการบัญชี คณะการจัดการและการท่องเที่ยว มหาวิทยาลัยบูรพา</h3>
+                <p>
+                    สาขาวิชาการบัญชี มหาวิทยาลัยบูรพา เป็นหลักสูตรที่มุ่งเน้นการผลิตบัณฑิตให้มีความรู้ความสามารถด้านการบัญชีอย่างรอบด้าน 
+                    ครอบคลุมทั้งการบัญชีการเงิน การบัญชีบริหาร การสอบบัญชี การบัญชีภาษีอากร รวมถึงการประยุกต์ใช้ระบบสารสนเทศและเทคโนโลยีดิจิทัลทางการบัญชี (Digital Accounting) 
+                    เพื่อให้ก้าวทันการเปลี่ยนแปลงของโลกธุรกิจในยุคปัจจุบัน
+                </p>
+                <p>
+                    นอกจากความเข้มข้นทางวิชาการที่ได้รับการรับรองมาตรฐานวิชาชีพจากสภาวิชาชีพบัญชีแล้ว หลักสูตรยังให้ความสำคัญกับการฝึกปฏิบัติจริงและสหกิจศึกษา 
+                    รวมถึงการปลูกฝังคุณธรรมและจรรยาบรรณแห่งวิชาชีพ ทำให้นิสิตสามารถต่อยอดสู่สายอาชีพที่หลากหลาย ไม่ว่าจะเป็นผู้สอบบัญชีรับอนุญาต (CPA) 
+                    นักบัญชี ผู้ตรวจสอบภายใน ที่ปรึกษาทางการเงินและภาษีอากร หรือผู้บริหารระดับสูงในองค์กรชั้นนำได้อย่างมั่นคง
+                </p>
             </div>
         </section>
 
@@ -581,13 +460,13 @@
         <section id="contact" class="contact">
             <div class="section-title">
                 <h2>Contact Me</h2>
-                <p>สามารถติดต่อผมได้ผ่านช่องทางเหล่านี้</p>
+                <p>สามารถติดต่อดิฉันได้ผ่านช่องทางเหล่านี้</p>
             </div>
 
             <div class="contact-box">
-                <p> Email : <a href="mailto:your@email.com">your@email.com</a></p>
-                <p> Instagram : <a href="#">@yourinstagram</a></p>
-                <p> GitHub : <a href="#">github.com/yourusername</a></p>
+                <p>Email : <a href="mailto:your@email.com">your@email.com</a></p>
+                <p>Instagram : <a href="#">@yourinstagram</a></p>
+                <p>GitHub : <a href="#">github.com/yourusername</a></p>
             </div>
         </section>
 
@@ -595,7 +474,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 My Portfolio | <span>วุฒิภัทร อินตะนัย</span></p>
+        <p>© 2026 My Portfolio | <span>นางสาว ทิติฐา ทองแถม</span></p>
     </footer>
 
 </body>
